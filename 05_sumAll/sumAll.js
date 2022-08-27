@@ -5,17 +5,14 @@
 - return sum once we reach end of the loop
 */
 const sumAll = function(a, b) {
-    let sum = 0;
-
-    if (a < 0 || b < 0 || typeof a != 'number' || typeof b != 'number') {
+    if (!Number.isInteger(a) || !Number.isInteger(b) || a < 0 || b < 0)
         return 'ERROR';
-    }
     if (a > b) {
         const temp = a;
         a = b;
         b = temp;
     }
-
+    let sum = 0;
     for (i = a; i <= b; i++) {
         sum += i;
     }
