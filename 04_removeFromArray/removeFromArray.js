@@ -1,14 +1,6 @@
-// turn the arguments into an array 
-// args[0] will be the input array and args[i] will be the target elements to remove
-// loop through the args
-// loop through the input array, if the args[i] === arr[j] then we will remove arr[j]
-// return arr
-
-// we will iterate through the arr
-// if the arr[i] === element then we will remove that item from the arr
-// return the arr
-const removeFromArray = function(arr, element) {
-    const args = Array.from(arguments);
+// using a rest parameter
+const removeFromArray = function(...args) {
+    const arr = args[0];
     let i = 1;
     while (i < args.length) {
         for (j = 0; j < arr.length; j++) {
